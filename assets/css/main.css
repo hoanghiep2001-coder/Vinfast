@@ -1,0 +1,149 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.body__left {
+    border-right: 1px solid rgb(143, 143, 143);
+}
+
+.body__container {
+    display: flex;
+}
+
+.body__left-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 8px;
+    font-size: 18px;
+    background-color: rgb(231, 231, 231);
+    transition: .3s ease-out;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.body__left-item:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.body__left-item i {
+    padding: 0 8px;
+}
+
+.body__left-item.active {
+    background-color: #fff;
+}
+
+.body__left-list {
+    padding-left: 8px;
+}
+
+.body__left-product {
+    padding: 10px 0;
+}
+
+.body__left-product a.add {
+    color: black;
+}
+
+.body__left-product.active {
+    color: rgb(70, 70, 255);
+}
+
+
+/* phần nội dung bên phải */
+
+.body__right {
+    flex: 70%;
+}
+
+.body__container-right {
+    background-color: rgb(44, 44, 44);
+}
+
+.display-flex {
+    display: flex;
+}
+
+.body__container-right-item-link,
+.body__container-right-item {
+    display: flex;
+    color: rgb(214, 214, 214);
+}
+
+.body__container-right-item {
+    padding: 15.5px 20px;
+    color: rgb(214, 214, 214);
+    ;
+    border-right: 1px solid rgb(143, 143, 143);
+}
+
+.ti-arrow-left {
+    padding: 0 8px;
+}
+
+.body__container-right-item:last-child {
+    border-right: none;
+}
+
+.body__container-right-item.wide {
+    padding: 15.5px 30px;
+}
+
+
+/* Dòng thêm mới sản phẩm */
+
+.body__container-filter {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.button {
+    padding: 14px 22px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid gray;
+    margin: 0 4px;
+}
+
+.filter-butto {
+    border: none;
+}
+
+.container__right-add-new {
+    padding: 14px 22px;
+    background-color: rgb(85, 85, 253);
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+.ti-plus {
+    padding: 0 6px 0 0;
+}
+
+.body__container-table {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.table__container {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid gray;
+}
+
+th {
+    padding: 12px;
+    font-size: 20px;
+}
+
+.panel-body {
+    width: 1000px;
+    margin: 0 auto;
+}

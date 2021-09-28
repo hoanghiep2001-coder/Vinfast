@@ -1,0 +1,103 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: inherit;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #ff6464;
+    --text-color: #473C3C;
+    --text-hover-color : #fff;
+    --p-color: #7E6F6F;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(167, 165, 165);
+    border-radius: 16px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(94, 92, 92);
+}
+
+/* modal animation */
+@keyframes loginForm {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    } 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: fadeIn linear 0.1s;
+    display: none;
+    z-index: 999999;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    margin: auto;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* button style */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    margin: 0 8px;
+    opacity: 0.8;
+}
+
+.btn:hover {
+    opacity: 1;
+    transition: 0.4s all ease;
+}
+
+.btn.btn-primary {
+    background-color: red; 
+    color: #fff; 
+}
+
+.btn.btn-disable {
+    cursor: default;
+}

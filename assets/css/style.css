@@ -1,0 +1,699 @@
+.header__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid rgb(187, 187, 187);
+    z-index: 999;
+}
+
+
+/* mở ra menu trắng */
+
+.header__container.none {
+    display: none;
+}
+
+.header__container.scroll.open {
+    display: block;
+}
+
+.header__container-navBar-item.scroll {
+    color: black;
+}
+
+.header__container-signIn-item.scroll {
+    color: black;
+}
+
+
+/**/
+
+.header__container.scroll {
+    display: none;
+    background-color: #fff;
+    animation: showNav 0.4s ease-out;
+}
+
+@keyframes showNav {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header__container-heading {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container-navBar-item {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: .3s ease-out;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.header__container-navBar-item:hover {
+    color: #2C72C6;
+}
+
+.scroll-hover.open,
+.onHover.open {
+    color: #2C72C6;
+}
+
+.header__container-signIn {
+    padding-left: 120px;
+}
+
+.header__container-signIn-item {
+    display: inline-block;
+    color: var(--text-color);
+    padding: 0 20px;
+    color: #fff;
+    font-size: 1.4rem;
+    padding-right: 0;
+}
+
+.header__container-signIn-item a {
+    color: var(--text-color);
+    padding: 10px 8px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    transition: .3s ease-out;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.header__container-signIn-item a:hover {
+    background-color: #2C72C6;
+}
+
+.header__container-signIn-item.scroll .link-scroll {
+    color: #2C72C6;
+    border: 1px solid #2C72C6;
+}
+
+.header__container-signIn-item.scroll .link-scroll:hover {
+    background-color: #2C72C6;
+    color: #fff;
+}
+
+.header__background img {
+    width: 100%;
+}
+
+
+/* body CSS */
+
+
+/* carousel */
+
+.body__container-banner {
+    padding: 80px 0;
+}
+
+.body__banner-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.body__banner-carousel {
+    display: flex;
+    height: 518px;
+    transition: .5s ease-out;
+}
+
+.body__banner-img-contain {
+    position: relative;
+    transform: translateX(0);
+}
+
+.body__banner-img-contain img {
+    width: 1200px;
+    height: 518px;
+}
+
+.banner-img-content {
+    position: absolute;
+    background-color: #fff;
+    z-index: 9;
+    top: 36px;
+    right: 36px;
+    width: 30%;
+    padding: 50px 30px;
+    border-radius: 5px;
+    font-family: mulish;
+    min-width: 365px;
+    height: calc(100% - 64px);
+    transition: .3s ease-out;
+}
+
+.banner-img-content h3 {
+    color: #1F2125;
+    font-size: 2.4rem;
+    font-weight: 500;
+    font-family: mulish;
+    margin-bottom: 20px;
+}
+
+.banner-img-content p {
+    font-size: 1.6rem;
+    color: #3f4247;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.body__banner-dots {
+    position: absolute;
+    bottom: 50px;
+    right: 156px;
+    z-index: 99;
+}
+
+.body__bannner-dot-item {
+    background-color: #1F2125;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 5px;
+    position: relative;
+    line-height: 10px;
+    cursor: pointer;
+}
+
+.body__bannner-dot-item.active {
+    background-color: #707070;
+}
+
+
+/* end carousel */
+
+.body__container-show-cars {
+    background: url(./img/background-OF-all.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body__container-show-cars h3 {
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: 500;
+    color: #4e5257;
+    letter-spacing: 8px;
+    padding: 40px 0;
+    font-family: mulish;
+}
+
+.show-cars-container {
+    display: flex;
+}
+
+.show-cars-item {
+    background: url(../img/bgcar.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    transition: .2s ease-out;
+}
+
+.show-cars-downContent,
+.show-cars-upContent {
+    padding: 30px 40px 0;
+    height: 220px;
+}
+
+.show-cars-upContent h2 {
+    color: #707070;
+    letter-spacing: 6px;
+    font-weight: 400;
+    padding-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.show-cars-upContent h4 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: #1F2125;
+}
+
+.show-cars-upContent h3 {
+    font-size: 2.0rem;
+    text-align: start;
+    padding-bottom: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.show-cars-downContent {
+    padding-bottom: 45px;
+    min-height: 279px;
+}
+
+.show-cars-list {
+    list-style: circle;
+    padding-left: 15px;
+}
+
+.show-cars-item-li {
+    color: #5c5f68;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+    list-style: circle;
+    list-style-type: disc;
+}
+
+.show-cars-title {
+    width: 100%;
+}
+
+.show-cars-item:hover .show-cars-logo,
+.show-cars-item:hover .show-cars-title {
+    filter: brightness(0) invert(1);
+}
+
+.show-cars-item:hover {
+    background: url(../img/bg-on-hover.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.show-cars-thisCar {
+    text-align: center;
+}
+
+.show-cars-thisCar h5 {
+    color: #5c5f68;
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+.show-cars-item:hover .show-cars-thisCar h5,
+.show-cars-item:hover .show-cars-item-li,
+.show-cars-item:hover .show-cars-upContent h4,
+.show-cars-item:hover .show-cars-upContent h3 {
+    color: #fff;
+}
+
+.show-cars-vinfast {
+    width: 100%;
+    object-fit: cover;
+}
+
+.body__container-video {
+    text-align: center;
+}
+
+.body__container-video h3 {
+    letter-spacing: 10px;
+    color: #1F2125;
+    font-weight: 400;
+    font-size: 2.8rem;
+    margin: 40px 0;
+    border-top: 1px solid #979797;
+    padding-top: 40px;
+}
+
+.body__conatiner-play-video {
+    display: flex;
+    align-items: center;
+}
+
+.first-video {
+    flex: 90%;
+}
+
+.body__container-right-col-video iframe {
+    width: 100%;
+    margin: 8px;
+}
+
+
+/* SUBNAV HOVER */
+
+.subnav__hover {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    margin-top: 56px;
+    left: 0;
+    right: 0;
+    display: none;
+    animation: openSubNav .4s ease-out;
+    z-index: 9999;
+}
+
+@keyframes openSubNav {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.subnav__hover.open {
+    display: block;
+}
+
+.subnav__hover-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.subnav__hover-header-left {
+    display: flex;
+}
+
+.subnav__hover-header-right h3,
+.subnav__hover-header-left h3 {
+    padding: 20px 0;
+    margin: 0 20px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #707070;
+    cursor: pointer;
+}
+
+.subnav__hover-header-right h3.active {
+    color: #2C72C6;
+    font-weight: 600;
+}
+
+.subnav__hover-header-left h3.active {
+    border-bottom: 3px solid #2C72C6;
+    color: #2C72C6;
+}
+
+.subnav__hover-header-left h3:first-child {
+    margin-left: 0;
+}
+
+.subnav__hover-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.subnav__hover-content.none {
+    display: none;
+}
+
+.subnav__electric-colOf-self h3,
+.subnav__hover-contant-col h3 {
+    margin-top: 20px;
+    color: #1F2125;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.subnav__electric-colOf-self p,
+.subnav__hover-contant-col p {
+    color: #979797;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.subnav__electric-colOf-self span,
+.subnav__hover-contant-col span {
+    padding-bottom: 20px;
+    font-size: 1.3rem;
+    color: #1F2125;
+    font-weight: 500;
+    display: block;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.cars-link {
+    padding-top: 10px;
+    display: block;
+    font-size: 1.3rem;
+    color: #2998DD;
+    font-weight: 600;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.subnav__hover-end {
+    text-align: center;
+    margin-top: 10px;
+    color: #979797;
+    font-size: 1.3rem;
+}
+
+.subnav__hover-end a {
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 100px;
+    background-color: #2C72C6;
+    display: inline-block;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+
+/* động cơ điện */
+
+.subnav__electric-col {
+    display: none;
+}
+
+.subnav__electric-col.open {
+    display: block;
+}
+
+.electric-car-img {
+    width: 100%;
+}
+
+
+/* xe máy điện */
+
+.subnav__univers-col,
+.subnav__high-col,
+.subnav__normal-col {
+    margin-top: 20px;
+}
+
+.subnav__electric-hover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 57px;
+    background-color: #fff;
+    display: none;
+    z-index: 9999;
+}
+
+.subnav__electric-hover.open {
+    display: block;
+    animation: openSubNav .4s ease-out;
+}
+
+.Subnav-moto-col {
+    display: none;
+}
+
+.Subnav-moto-col.active {
+    display: flex;
+}
+
+.level.active {
+    border-bottom: 3px solid #2C72C6;
+}
+
+/* Công cụ CSS */
+.subnav__search-hover,
+.subnav__service-hover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 57px;
+    z-index: 9999;
+    background-color: #fff;
+    display: none;
+    animation: openSubNav .4s ease-out;
+}
+
+.subnav__service-hover.open {
+    display: block;
+}
+
+.subnav__service-container {
+    padding: 30px 0 20px;
+}
+
+.subnav__service-row {
+    align-items: center;
+}
+
+.subnav__service-col h3 {
+    font-size: 1.6rem;
+    color: #1F2125;
+    font-family: mulish;
+    font-weight: 600;
+    margin: 0 10px 20px;
+}
+
+.subnav__service-col li {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #1F2125;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+.subnav__service-col li:hover {
+    background-color: rgba(44, 114, 198, 0.1);
+    color: #2C72C6;
+    transition: .75s ease all;
+}
+
+.subnav__service-col img {
+    width: 100%;
+}
+
+/* cong cu CSS */
+.subnav__search-hover {
+    background-color: rgba(234, 241, 250, 0.5);
+    transition: .4s ease-out;
+}
+
+.subnav__search-hover.open {
+    display: block;
+}
+
+.subnav__search-hover.none {
+    animation: hideSubnav .4s ease-out;
+}
+
+@keyframes hideSubnav {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    } to {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+}
+
+.subnav__search-container {
+    padding: 20px 0;
+    font-size: 1.6rem;
+}
+
+.subnav__search-input {
+    outline: none;
+    border: 1px solid #2C72C6;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: #2C72C6;
+}
+
+.subnav__search-input::placeholder {
+    color: #2C72C6;
+}
+
+.subnav__search-button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: #2998DD;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 30px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: .4s ease-out;
+}
+
+.subnav__search-button:hover {
+    background: #1d6592;
+}
+/* footer */
+
+.footer {
+    padding-top: 50px;
+}
+
+.footer__container {
+    padding: 30px 0 50px;
+    font-size: 1.3rem;
+}
+
+.footer__container-row {
+    margin-bottom: 40px;
+}
+
+.footer__container-col h3 {
+    color: #2C72C6;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.footer__container-item {
+    margin-bottom: 10px;
+    color: #1F2125;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease-out;
+    line-height: 20px;
+}
+
+.footer__others-item:hover,
+.footer__container-item:hover {
+    color: #2C72C6;
+}
+
+.footer__bocongthuong {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.footer__others-item {
+    display: inline-block;
+    margin-right: 40px;
+    font-weight: 500;
+}
+
+.footer__others-item.active {
+    color: #2C72C6;
+}
+
+.footer__bocongthuong-img img {
+    width: 135px;
+    height: 51px;
+}
+
+.footer__end {
+    padding: 40px 0 0;
+    text-align: center;
+    border-top: 1px solid #979797;
+}
